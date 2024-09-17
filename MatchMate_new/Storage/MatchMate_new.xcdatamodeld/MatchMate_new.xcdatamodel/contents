@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22222" systemVersion="23B74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CoordinatesEntity" representedClassName="CoordinatesEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="latitude" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="DateEntity" representedClassName="DateEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="age" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="IDEntity" representedClassName="IDEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="value" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="LocationEntity" representedClassName="LocationEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="postcode" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <relationship name="coordinates" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoordinatesEntity"/>
+        <relationship name="street" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StreetEntity"/>
+        <relationship name="timezone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TimezoneEntity"/>
+    </entity>
+    <entity name="LoginEntity" representedClassName="LoginEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="md5" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="salt" optional="YES" attributeType="String"/>
+        <attribute name="sha1" optional="YES" attributeType="String"/>
+        <attribute name="sha256" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+        <attribute name="uuid" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="NameEntity" representedClassName="NameEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="first" optional="YES" attributeType="String"/>
+        <attribute name="last" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="PictureEntity" representedClassName="PictureEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="large" optional="YES" attributeType="String"/>
+        <attribute name="medium" optional="YES" attributeType="String"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="StreetEntity" representedClassName="StreetEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="TimezoneEntity" representedClassName="TimezoneEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="description_timezone" optional="YES" attributeType="String"/>
+        <attribute name="offset" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="UserProfile" representedClassName=".UserProfile" syncable="YES" codeGenerationType="class">
+        <attribute name="cell" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="nat" optional="YES" attributeType="String"/>
+        <attribute name="phone" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <relationship name="dob" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DateEntity"/>
+        <relationship name="idInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="IDEntity"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationEntity"/>
+        <relationship name="login" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LoginEntity"/>
+        <relationship name="name" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NameEntity"/>
+        <relationship name="picture" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PictureEntity"/>
+        <relationship name="registered" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DateEntity"/>
+    </entity>
+</model>

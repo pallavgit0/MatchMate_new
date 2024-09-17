@@ -1,16 +1,9 @@
-//
-//  MatchMate_newApp.swift
-//  MatchMate_new
-//
-//  Created by B0288802 on 15/09/24.
-//
-
 import SwiftUI
+import CoreData
 
 @main
-struct MatchMate_newApp: App {
+struct MatchMateApp: App {
     let persistenceController = PersistenceController.shared
-
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -18,3 +11,5 @@ struct MatchMate_newApp: App {
         }
     }
 }
+
+
