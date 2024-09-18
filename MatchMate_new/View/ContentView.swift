@@ -23,9 +23,9 @@ struct ContentView: View {
             }
             
             // Toast Message
-            ToastView(message: viewModel.errorMessage ?? Constants.BLANK_STR, showToast: $showToast)
-                .onChange(of: viewModel.errorMessage) {
-                    if viewModel.errorMessage != nil {
+            ToastView(message:  viewModel.error?.localizedDescription ?? Constants.BLANK_STR, showToast: $showToast)
+                .onChange(of: viewModel.error) {
+                    if viewModel.error != nil {
                         withAnimation {
                             showToast = true
                         }
